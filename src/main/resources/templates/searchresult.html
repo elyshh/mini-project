@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicing Cocktail</title>
+
+    <link rel="stylesheet" href="../styles/home.css">
+</head>
+<body>
+    <header>
+        <h2 class="logo">CocktailService</h2>
+        <nav class="navigation">
+            <button class="btnLogout" id="logoutBtn">Log out</button>
+        </nav>
+    </header>
+
+    <h3 th:if="${searchTerm}">
+        <span style="white-space: nowrap;">Search:</span><br/>
+        <span th:text="${searchTerm}"></span>
+    </h3>
+    
+    <div class="container">
+        <p th:if="${noResultsMessage}" th:text="${noResultsMessage}"></p>
+    </div>
+
+    <div class="container">
+        <a th:href="@{/home}" class="back-button">Back</a>
+        <form th:action="@{/search}" method="GET">
+            <label for="searchTerm">Search Cocktail:</label>
+            <input type="text" id="searchTerm" name="searchTerm" th:value="${searchTerm}">
+            <button type="submit">Search</button>
+
+            <h4>Cocktails List:</h4>
+            <ul th:if="${searchResults}">
+                <li th:each="cocktail : ${searchResults}">
+                    <p th:text="${cocktail.name}"></p>
+                    <img th:src="${cocktail.thumbnail}" alt="Cocktail Thumbnail"/>
+                </li>
+            </ul>
+        </form>
+    </div>
+
+    <script>
+        var loginButton = document.getElementById('logoutBtn');
+
+        loginButton.addEventListener('click', function() {
+            window.location.href = 'logout';
+        });
+    </script>
+    
+</body>
+</html>

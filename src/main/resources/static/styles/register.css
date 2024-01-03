@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin-top: 5%;
+    margin-bottom: 2.5%;
+}
+
+.container {
+    width: 600px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    padding: 50px 60px;
+}
+
+.container h1 {
+    font-size: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.form-control {
+    border-radius: 0;
+    background: transparent;
+    border-color: transparent;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    padding-left: 0 !important;
+    font-size: 16px;
+}
+
+.form-control:focus {
+    border-color: transparent;
+    box-shadow: none;
+    color: #fff;
+    background: transparent;
+    border-bottom: 2px solid turquoise;
+    padding: 0;
+}
+
+.form-floating label {
+    padding: 0;
+    color: #fff;
+    margin-top: -2px;
+    transform: translate(0, 35%);
+    transition: .3s;   
+}
+
+.form-control:not(:placeholder-shown) ~ label {
+    transform: translate(0, -5%) scale(0.8) !important;
+    transform-origin: 0 0;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+.form-floating input.form-control:focus ~ label {
+    transform: translate(0, -5%) scale(0.8);
+    color: turquoise;
+    transform-origin: 0 0;
+    font-size: 20px;
+    padding-left: 0;
+    margin-left: 0;
+    opacity: 1;
+}
+
+a[href="/login"] {
+    text-decoration: none;
+    font-weight: 600;
+    color: turquoise;
+    transition: all 0.3s;
+}
+
+a[href="/login"]:hover {
+    text-decoration: underline;
+    color: turquoise;
+}
+
+.form-floating .bx {
+    position: absolute;
+    top: 40%;
+    right: 0px;
+    font-size: 20px;
+    transition: .3s;
+    color: #fff;
+}
+
+.form-control:focus + .form-floating .bx,
+.form-control:focus + .form-floating .bxs-user {
+    color: turquoise;
+}
+
+.input-dob {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin: 30px 0;
+    margin-top: 40px;
+    margin-bottom: 17px;
+}
+
+.input-dob label {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 18px;
+    color: lightgray !important;
+    pointer-events: none;
+}
+
+.input-dob input[type="date"] {
+    color: #fff !important;
+}
+
+.input-dob input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    padding-right: 20px;
+}
+
+.input-dob input:focus,
+.input-dob input:valid {
+    border-bottom-color: #fff;
+}
+
+.input-dob input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.8) sepia(0%) saturate(0%) hue-rotate(0deg);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: -2px;
+    top: 35%;
+    transform: translateY(-50%);
+}
+
+.btn:hover {
+    background-color: turquoise;
+    border-color: turquoise;
+}
+
+.alert-danger {
+    padding: 0px;
+    margin-top: -15px;
+    font-size: 15px;
+    font-style: italic;
+    background-color: transparent;
+    border-color: transparent;
+    color: turquoise;
+}
+
+.form-check {
+    color: #fff;
+}
+
+.custom-width {
+    width: 150px;
+    height: 45px;
+    font-weight: 500;
+}
+
+/* Autofill */
+.form-control:-webkit-autofill,
+.form-control:-webkit-autofill:hover, 
+.form-control:-webkit-autofill:focus {
+    -webkit-text-fill-color: #fff;
+    background-color: transparent !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+

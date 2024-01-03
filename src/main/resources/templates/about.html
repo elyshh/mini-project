@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/login.css">
+</head>
+<body>
+    
+    <header>
+        <h2 class="logo">CocktailService</h2>
+        <nav class="navigation">
+            <a href="about">About</a>
+            <button class="btnLogin" id="loginBtn">Login</button>
+        </nav>
+    </header>
+
+    <div class="about">
+        <div class="about-image">
+            <img src="../images/about.jpg" style="width: 80%;">
+        </div>
+        <div class="about-text">
+            <h1>About Cocktail Service</h1>
+            <br><br>
+            <p>This website is created to help people find different types of cocktail and how to mix them.</p>
+            <br>
+        </div>
+    </div>
+
+    <script>
+        var loginButton = document.getElementById('loginBtn');
+
+        loginButton.addEventListener('click', function() {
+            window.location.href = 'login';
+        });
+    </script>
+    
+</body>
+</html>
