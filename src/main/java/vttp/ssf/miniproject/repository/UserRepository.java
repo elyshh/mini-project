@@ -41,11 +41,6 @@ public class UserRepository {
         user_output.setName(name);
         user_output.setDateOfBirth(LocalDate.parse(dob));
 
-        // Register register = new Register();
-        // register.setName(name);
-        // register.setDateOfBirth(LocalDate.parse(dob));
-        // user_output.setRegister(register);
-
         return user_output;
     }
 

@@ -104,7 +104,6 @@ public class UserController {
         userRepo.register(registerUser);
         redirectAttributes.addFlashAttribute("successMessage", "You have registered successfully!");
         
-        // model.addAttribute("user", user);
         return "redirect:/login";
     }
 
